@@ -4,6 +4,11 @@ const userName = 'Mario';
 
 
 // Dichiara la funzione qui.
+/**
+ * Function to do a greeting
+ * @param {string} name 
+ * @returns {string} a greeting with the given name
+ */
 function sayHi(name) {
   return "ciao " + name;
 }
