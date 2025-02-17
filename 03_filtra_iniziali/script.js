@@ -4,9 +4,29 @@ const names = ["Anna", "Luca", "Marco", "Adele", "Laura", "Alessandra"];
 
 
 // Dichiara la funzione qui.
+/**
+ * Function that returns an array with names initiating with the given letter
+ * @param {Array} names 
+ * @param {string} letter 
+ * @returns {Array} filteredWord 
+ */
+function justFilteredWords(names, letter) {
+  const filteredWords = [];
+
+  for (let i = 0; i < names.length; i++) {
+    thisName = names[i];
+    if (thisName[0] === letter) {
+      filteredWords.push(thisName);
+    }
+  }
+
+  return filteredWords;
+}
 
 
 // Invoca la funzione qui e stampa il risultato in console
+const filteredWords = justFilteredWords(names, "A");
+console.log(filteredWords);
 
 
 
