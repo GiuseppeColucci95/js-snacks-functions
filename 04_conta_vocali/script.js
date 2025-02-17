@@ -4,9 +4,29 @@ const word = 'javascript';
 
 
 // Dichiara la funzione qui.
+/**
+ * Function that return the number of vocals in the given word
+ * @param {string} sentence 
+ * @returns {number} counter
+ */
+function countVocals(sentence) {
+  let counter = 0;
+
+  for (let i = 0; i < sentence.length; i++) {
+    thisLetter = sentence[i];
+    if (thisLetter === "a" || thisLetter === "e" || thisLetter === "i" || thisLetter === "o" || thisLetter === "u") {
+      counter++;
+    }
+  }
+
+  return counter;
+}
 
 
 // Invoca la funzione qui e stampa il risultato in console
+const vocalsNumber = countVocals(word);
+console.log(vocalsNumber);
+
 
 
 
