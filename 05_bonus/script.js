@@ -9,9 +9,33 @@ const name = 'Mario';
 
 
 // Dichiara la funzione qui.
+/**
+ * Function that return a timed greeting from a given name
+ * @param {string} name 
+ * @returns {string} greeting
+ */
+function sayTimedHi(name) {
+  let greeting;
+  const date = new Date();
+  const hour = date.getHours();
+
+  if (hour >= 0 && hour < 13) {
+    greeting = "Buongiorno ";
+  } else if (hour >= 13 && hour < 17) {
+    greeting = "Buon pomeriggio ";
+  } else {
+    greeting = "Buonasera ";
+  }
+
+  greeting += name;
+
+  return greeting;
+}
 
 
 // Invoca la funzione qui e stampa il risultato in console
+const greeting = sayTimedHi(name);
+console.log(greeting);
 
 
 
